@@ -20,6 +20,7 @@ gem 'therubyracer'
 gem 'foundation-rails'
 gem 'rest_client'
 gem 'githubrepo'
+gem 'jquery-star-rating-rails'
 
 group :development do
   gem 'better_errors'

@@ -121,6 +121,8 @@ GEM
     jquery-rails (3.1.0)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
+    jquery-star-rating-rails (4.0.4)
+      rails (>= 3.1.0)
     jquery-turbolinks (2.0.2)
       railties (>= 3.1.0)
       turbolinks
@@ -300,6 +302,7 @@ DEPENDENCIES
   friendly_id
   githubrepo
   jquery-rails
+  jquery-star-rating-rails
   jquery-turbolinks
   kaminari
   launchy
