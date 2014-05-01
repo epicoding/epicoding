@@ -1,7 +1,7 @@
 # Read about factories at https://github.com/thoughtbot/factory_girl
 
 FactoryGirl.define do
-  factory :resource, :class => 'Resources' do
+  factory :resource do
     name { Faker::Lorem.word }
     summary { Faker::Lorem.sentences.join(" ") }
     url 'http://www.epicodus.com'
