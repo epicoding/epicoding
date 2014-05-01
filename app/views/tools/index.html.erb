@@ -1,0 +1,12 @@
+<h1>Nested Resources</h1>
+
+<% @tools.each do |tool| %>
+  <ul>
+  <li><%= tool.name %></li>
+    <% tool.resources.each do |resource| %>
+    <ul>
+      <li><%= resource.name %></li>
+    </ul>
+    <% end %>
+  </ul>
+<% end %>
