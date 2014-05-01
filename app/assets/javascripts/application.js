@@ -13,4 +13,11 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require jquery-star-rating
 //= require_tree .
+
+$(document).ready(function(){
+  $('#search').keyup(function(event){
+    $('#toolSearch').submit();
+  });
+});

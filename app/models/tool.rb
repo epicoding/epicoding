@@ -5,4 +5,6 @@ class Tool < ActiveRecord::Base
   validates_presence_of :name
   validates_presence_of :summary
   validates_presence_of :url
+
+  accepts_nested_attributes_for :resources
 end
