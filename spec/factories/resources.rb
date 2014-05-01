@@ -6,6 +6,6 @@ FactoryGirl.define do
     summary { Faker::Lorem.sentences.join(" ") }
     url 'http://www.epicodus.com'
     user_id { Faker::Number.number(1) }
-    tool_id { Faker::Number.number(2) }
+    tool_id 13
   end
 end
