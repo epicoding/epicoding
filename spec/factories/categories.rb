@@ -1,7 +1,7 @@
 # Read about factories at https://github.com/thoughtbot/factory_girl
 
 FactoryGirl.define do
-  factory :category, :class => 'Categories' do
+  factory :category do
     name { Faker::Lorem.word }
   end
 end
