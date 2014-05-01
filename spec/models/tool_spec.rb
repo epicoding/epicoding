@@ -7,4 +7,6 @@ describe Tool do
   it { should validate_presence_of :name }
   it { should validate_presence_of :summary }
   it { should validate_presence_of :url }
+
+  it { should accept_nested_attributes_for :resources }
 end
