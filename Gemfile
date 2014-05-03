@@ -21,6 +21,8 @@ gem 'foundation-rails'
 gem 'rest_client'
 gem 'githubrepo'
 gem 'jquery-star-rating-rails'
+gem 'rails_admin'
+gem 'nested_form'
 
 group :development do
   gem 'better_errors'
