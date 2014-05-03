@@ -12,4 +12,10 @@ feature 'user_accounts' do
 
 		page.should have_content "Welcome! You have signed up successfully."
 	end
+
+	scenario 'an existing user signs in' do
+		user = FactoryGirl.create(:user)
+		sign_in(user)
+		page.should have_content "Welcome! You have successfully signed in."
+	end
 end
