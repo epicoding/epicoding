@@ -2,7 +2,7 @@
 
 <% @tools.each do |tool| %>
   <ul>
-  <li><%= tool.name %></li>
+  <li><%= link_to tool.name, tool_path(tool.id) %></li>
     <% tool.resources.each do |resource| %>
     <ul>
       <li><%= link_to resource.name, resource.url %> | <button class="btn btn-default">Resource Page</button></li>
