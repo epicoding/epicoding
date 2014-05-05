@@ -5,7 +5,13 @@
   <li><%= tool.name %></li>
     <% tool.resources.each do |resource| %>
     <ul>
-      <li><%= resource.name %></li>
+      <li><%= link_to resource.name, resource.url %> | <button class="btn btn-default">Resource Page</button></li>
+      <!--ionicons not working!
+      <li class="ion-ionic" data-pack="default"></li-->
+
+        <ul>
+          <li><%= resource.summary %></li>
+        </ul>
     </ul>
     <% end %>
   </ul>
