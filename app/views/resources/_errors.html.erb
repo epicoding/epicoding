@@ -1,0 +1,8 @@
+<% if @resource.errors.any? %>
+  <p>Something went wrong:</p>
+  <ul>
+    <% @resource.errors.each do |resource| %>
+      <li><%= resource %></li>
+    <% end %>
+  </ul>
+<% end %>

@@ -8,3 +8,5 @@
     <li><%= link_to resource.name, resource.url %></li>
   </ul>
 <% end %>
+
+<button class="btn btn-default"><%= link_to "Add Resource", new_resource_path(@resource), :class => 'btn-resources' %></button>

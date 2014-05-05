@@ -1,0 +1,17 @@
+<%= render 'resources/errors' %>
+
+<%= form_for(@resource) do |f| %>
+  <div class="form-group">
+    <%= f.label :name, "Resource Name: " %><br \>
+    <%= f.text_field :name, :placeholder => "Railscasts, etc" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :summary, "Brief description of the resource: " %><br \>
+    <%= f.text_area :summary, cols: 90, rows: 4, :placeholder => "What is this resource? What is its primary value? Why is it useful?" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :url, "URL: " %><br \>
+    <%= f.text_field :url %>
+  </div>
+  <%= f.submit(:class => "btn btn-default") %>
+<% end %>
