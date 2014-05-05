@@ -1,0 +1,17 @@
+<%= render 'tools/errors' %>
+
+<%= form_for(@tool) do |f| %>
+  <div class="form-group">
+    <%= f.label :name, "Tool Name: " %><br \>
+    <%= f.text_field :name, :placeholder => "Ruby, Angular, etc" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :summary, "Brief description of the tool: " %><br \>
+    <%= f.text_area :summary, cols: 90, rows: 4, :placeholder => "What is this tool (language, framework, service, etc)? What is its primary value? Why would a developer use it?" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :url, "Official URL: " %><br \>
+    <%= f.text_field :url %>
+  </div>
+  <%= f.submit(:class => "btn btn-default") %>
+<% end %>

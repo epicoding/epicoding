@@ -14,6 +14,11 @@
 2. Create validations for Epicodus students (hint: start with simple password)
 3.
 
+#### 140505
+
+1. *DONE* Create views for tools
+2.
+
 
 
 

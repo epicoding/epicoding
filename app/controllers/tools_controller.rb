@@ -12,14 +12,13 @@ class ToolsController < ApplicationController
   end
 
   def create
-    @user = User.find(params[:id])
-    @tool = Tool.new
+    @tool = current_user.tools.build(tool_params)
     if @tool.save
       respond_to do |format|
         format.html do
           current_user.tools << @tool
           flash[:notice] = 'Tool Created.'
-          redirect_to tool_path
+          redirect_to tool_path(@tool)
         end
         format.json { render :json => @tool, :status => 201 }
       end
