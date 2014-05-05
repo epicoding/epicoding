@@ -7,7 +7,7 @@
   <li><%= link_to tool.name, tool_path(tool.id) %> | <%= link_to "Show Resources (refactor with AJAX)", tool_path(tool.id), :class => 'btn-tools' %> | <%= link_to "Add Resource (AJAX)", new_resource_path(@resource), :class => 'btn-resources' %></li>
     <% tool.resources.each do |resource| %>
     <ul>
-      <li><%= link_to resource.name, resource_path(resource.id) %> | <%= link_to resource.url, resource_path(resource.id), :class => 'btn-resources' %></li>
+      <li><%= link_to resource.name, resource_path(resource.id) %> | <a href="<%= resource.url %>"><%= resource.url %></a></li>
       <!--ionicons not working!
       <li class="ion-ionic" data-pack="default"></li-->
 
