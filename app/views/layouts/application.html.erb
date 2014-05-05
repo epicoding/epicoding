@@ -1,15 +1,59 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>CodingTools</title>
+  <title>Epicoding Tools</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a href="/" class="navbar-brand">Epicoding</a>
+      </div>
+      <div class="navbar-collapse collapse navbar-responsive-collapse">
+        <ul class="nav navbar-nav">
+          <li class="active">
+            <a href="#">Active</a>
+          </li>
+          <li>
+            <a href="#">Link</a>
+          </li>
+        </ul>
+        <form class="navbar-form navbar-left">
+          <input type="text" class="form-control col-lg-8" placeholder="Search">
+        </form>
+        <ul class="nav navbar-nav navbar-right">
+          <% if user_signed_in? %>
+            <li>
+              <strong><font color="red"><%= current_user.email %></font></strong>
+            </li>
+            <li>
+              <%= link_to "Edit Profile", edit_user_registration_path %>
+            </li>
+            <li>
+              <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+            </li>
+          <% else %>
+            <li>
+              <%= link_to "Sign up", new_user_registration_path %>
+            </li>
+            <li>
+              <%= link_to "Log in", new_user_session_path %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-<%= yield %>
+
+    <%= yield %>
+  </div>
 
 </body>
 </html>
