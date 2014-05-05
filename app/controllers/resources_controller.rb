@@ -27,7 +27,6 @@ class ResourcesController < ApplicationController
   end
 
   def show
-    @tool = Tool.find(params[:id])
     @resource = Resource.find(params[:id])
 
     respond_to do |format|
