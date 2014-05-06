@@ -5,9 +5,9 @@
 <% @tools.each do |tool| %>
   <ul>
   <li><%= link_to tool.name, tool_path(tool.id) %> | <%= link_to "Show Resources (refactor with AJAX)", tool_path(tool.id), :class => 'btn-tools' %> | <%= link_to "Add Resource (AJAX)", new_tool_resource_path(tool.id), :class => 'btn-resources' %></li>
-    <% tool.resources.each do |tool, resource| %>
+    <% tool.resources.each do |resource| %>
     <ul>
-      <li><%= link_to tool.resource.name(resource.id), tool_resource_path(resource.id, tool.id) %> | <a href="<%= resource.url %>"><%= tool.resource.url %></a></li>
+      <li><%= link_to resource.name, tool_resource_path(tool, resource) %> | <a href="<%= resource.url %>"><%= resource.url %></a></li>
       <!--ionicons not working!
       <li class="ion-ionic" data-pack="default"></li-->
 

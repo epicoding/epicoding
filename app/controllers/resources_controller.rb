@@ -8,7 +8,6 @@ class ResourcesController < ApplicationController
 
   def index
     @resources = @tool.resources
-    end
   end
 
   def new
@@ -18,7 +17,7 @@ class ResourcesController < ApplicationController
   def create
     @tool = Tool.find(params[:tool_id])
     @resource = Resource.new(params[:strong])
-    @resource = @tool.resources.new(params[:strong)
+    @resource = @tool.resources.new(params[:strong])
     if @resource.save
       redirect_to [@tool, @resource],
       flash[:notice] = 'Resource successfull submitted.'
