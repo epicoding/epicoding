@@ -17,7 +17,7 @@
 #### 140505
 
 1. *DONE* Create views for tools
-2.
+2. Tools Index: Make it a list with just the names of the tools. Utilize AJAX to show the resources of the tool when you click the link. Add an icon to the left of the tool name to go to its show page.
 
 
 

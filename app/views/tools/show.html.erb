@@ -3,10 +3,15 @@
     <%= @tool.summary %>
   </p>
 
+<h3>Resources:</h3>
+
 <% @tool.resources.each do |resource| %>
   <ul>
-    <li><%= link_to resource.name, resource.url %></li>
+    <li><%= link_to resource.name, [@tool, resource] %> | <a href="<%= resource.url %>"><%= resource.url %></a></li>
+      <ul>
+        <li><%= resource.summary %>
+      </ul>
   </ul>
 <% end %>
 
-<button class="btn btn-default"><%= link_to "Add Resource", new_resource_path(@resource), :class => 'btn-resources' %></button>
+<button class="btn btn-default"><%= link_to "Add Resource", new_tool_resource_path(@tool.id), :class => 'btn-resources' %></button>

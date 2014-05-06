@@ -1,8 +1,13 @@
 class ResourcesController < ApplicationController
 
+  before_filter :get_tool
+
+  def get_tool
+    @tool = Tool.find(params[:tool_id])
+  end
+
   def index
-    @tools = Tool.all
-    @resources = Resource.all
+    @resources = @tool.resources
 
     respond_to do |format|
       format.html
@@ -11,15 +16,15 @@ class ResourcesController < ApplicationController
   end
 
   def new
-    @resource = Resource.new
+    @resource = Resource.new(params[:strong])
   end
 
   def create
-    @resource = current_user.resources.build(strong)
-    @tool = Tool.find(params[:id])
+    @resource = Resource.new
     if @resource.save
+      @tool.resource = params[:tool_id]
       @tool.resources << @resource
-      redirect_to tool_path
+      redirect_to tool_resource_path(@tool)
     else
       flash[:notice] = 'Please fix the errors as marked.'
       render 'new'
@@ -27,7 +32,7 @@ class ResourcesController < ApplicationController
   end
 
   def show
-    @resource = Resource.find(params[:id])
+    @resource = @tool.resources.find(params[:id])
 
     respond_to do |format|
       format.html
@@ -58,6 +63,10 @@ class ResourcesController < ApplicationController
 
 private
   def strong
-    params.require(:resource).permit(:name, :summary, :tool_id, :user_id, :cat_id, :url)
+    params.require(:resource).permit(:name, :summary, :url)
+  end
+
+  def tool_params
+    params.require(:tool).permit(:id)
   end
 end

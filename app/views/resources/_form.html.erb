@@ -1,6 +1,6 @@
 <%= render 'resources/errors' %>
 
-<%= form_for(@resource) do |f| %>
+<%= form_for([@tool, @resource]) do |f| %>
   <div class="form-group">
     <%= f.label :name, "Resource Name: " %><br \>
     <%= f.text_field :name, :placeholder => "Railscasts, etc" %>
@@ -13,5 +13,8 @@
     <%= f.label :url, "URL: " %><br \>
     <%= f.text_field :url %>
   </div>
+  <div class="form-group">
+    <%= f.hidden_field :user_id, value: current_user.id %>
+    <%= f.hidden_field :tool_id, value: @tool.id %>
   <%= f.submit(:class => "btn btn-default") %>
 <% end %>
