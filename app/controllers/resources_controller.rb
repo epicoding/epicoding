@@ -8,23 +8,20 @@ class ResourcesController < ApplicationController
 
   def index
     @resources = @tool.resources
-
-    respond_to do |format|
-      format.html
-      format.json { render json: @tools }
     end
   end
 
   def new
-    @resource = Resource.new(params[:strong])
+    @resource = Resource.new
   end
 
   def create
-    @resource = Resource.new
+    @tool = Tool.find(params[:tool_id])
+    @resource = Resource.new(params[:strong])
+    @resource = @tool.resources.new(params[:strong)
     if @resource.save
-      @tool.resource = params[:tool_id]
-      @tool.resources << @resource
-      redirect_to tool_resource_path(@tool)
+      redirect_to [@tool, @resource],
+      flash[:notice] = 'Resource successfull submitted.'
     else
       flash[:notice] = 'Please fix the errors as marked.'
       render 'new'

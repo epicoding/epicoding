@@ -1,6 +1,5 @@
 # Read about factories at https://github.com/thoughtbot/factory_girl
 
-###### This factoryGirl is not working! Email needs authentication. Check in rails c test.
 
 FactoryGirl.define do
   factory :user do

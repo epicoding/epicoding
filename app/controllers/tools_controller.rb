@@ -12,7 +12,7 @@ class ToolsController < ApplicationController
   end
 
   def create
-    @tool = current_user.tools.build(tool_params)
+    @tool = Tool.new
     if @tool.save
       respond_to do |format|
         format.html do
@@ -36,6 +36,7 @@ class ToolsController < ApplicationController
 
   def show
     @tool = Tool.find(params[:id])
+    @resources = @tool.resources
   end
 
   def edit
