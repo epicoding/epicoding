@@ -11,6 +11,17 @@ Posts are voted by the community.
 3. Send us a pull request!
     * If you need assistance collaborating with Git, check out [using git for collaboration](http://www.learnhowtoprogram.com/lessons/using-git-for-collaboration) courtesy of Epicodus.
 
+### Notes RE: Schema
+
+**1. Tools**
+    a. A Tool is something used and taught in class, like Ruby, Rails, JavaScript, Ember, etc.
+    b. A tool has many resources.
+**2. Resources**
+    a. A resource is a link that helps you understand a Tool better.
+    b. A resource belongs to tool. A tool has many resources.
+**3. Cats (Categories)**
+    a. A Category is a classification of a resource.
+
 ### Resource Categories:
 
 * Amazing (uncategorized)
@@ -21,7 +32,6 @@ Posts are voted by the community.
 * Findings (other)
 * Guides
 * Hot! (new and trending)
-
 
 ### Working Ideas
 
