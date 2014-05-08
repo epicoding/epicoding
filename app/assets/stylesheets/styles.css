@@ -8,12 +8,19 @@
 
 .btn-resources {
   color: #3a87ad;
+
 }
 
 ul {
   list-style: none;
 }
 
-#hidden-resources {
+.hidden-resources {
   display: none;
 }
+
+#resources:hover {
+  cursor: pointer;
+  color: #009933;
+}
+

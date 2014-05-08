@@ -24,6 +24,7 @@ $(document).ready(function(){
 
 $(document).ready(function() {
   $("#show").click(function() {
-    $("#hidden-resources").show();
+    $(".hidden-resources").toggle();
+    $(".showing-resources").toggle();
   });
 });
