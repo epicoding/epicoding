@@ -5,7 +5,7 @@
 2. *DONE* Pass specs with relations in the models
 3. Initialize Capybara
 4. Create RESTful actions for all models
-5. Initiate bootstrap and css styles
+5. *DONE* Initiate bootstrap and css styles
 
 
 #### 140502
@@ -17,7 +17,7 @@
 #### 140505
 
 1. *DONE* Create views for tools
-2. Tools Index: Make it a list with just the names of the tools. Utilize AJAX to show the resources of the tool when you click the link. Add an icon to the left of the tool name to go to its show page.
+2. *DONE* Tools Index: Make it a list with just the names of the tools. Utilize AJAX to show the resources of the tool when you click the link.
 
 #### 140507
 
@@ -30,6 +30,8 @@
 2. Add dropdown menu for sorting by resource category and tool type.
     a. This should be in the overall site for sorting all the tools
     b. Also have a dropdown menu to sort the resources for each tool in-line with the "name | show resources | add resource|" line to include "| Sort by Category"
+
+#### 140508
 
 
 ## Other non-dated tasks:
