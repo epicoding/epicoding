@@ -6,6 +6,8 @@ Posts are voted by the community.
 
 ## Contributing
 
+*Please see the "to_do.md" file for a list of items that need to be completed.*
+
 1. Fork the repo
 2. Create a branch
 3. Send us a pull request!
