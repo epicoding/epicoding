@@ -1,6 +1,4 @@
-<%= render 'resources/errors' %>
-
-<%= form_for([@tool.resource]) do |f| %>
+<%= form_for([@tool, @resource]) do |f| %>
   <div class="form-group">
     <%= f.label :name, "Resource Name: " %><br \>
     <%= f.text_field :name, :placeholder => "Railscasts, etc" %>

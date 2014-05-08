@@ -12,7 +12,7 @@ class ToolsController < ApplicationController
   end
 
   def create
-    @tool = Tool.new
+    @tool = Tool.new(tool_params)
     if @tool.save
       respond_to do |format|
         format.html do
@@ -24,12 +24,8 @@ class ToolsController < ApplicationController
       end
     else
       respond_to do |format|
-        format.html do
-          flash[:notice] = 'Please fix the errors as marked.'
-          render 'new'
-        end
-        format.json { render :json => @tool.errors, :status => 422 }
-        render 'new'
+        format.html { render 'new' }
+        format.json { render :json => @idea.errors, :status => 422 }
       end
     end
   end
@@ -54,6 +50,6 @@ class ToolsController < ApplicationController
 
 private
   def tool_params
-    params.require(:tool).permit(:name, :summary, :url)
+    params.require(:tool).permit(:name, :summary, :url, :user_id)
   end
 end

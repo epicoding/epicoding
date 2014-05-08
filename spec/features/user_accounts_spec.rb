@@ -15,7 +15,9 @@ feature 'user_accounts' do
 
 	scenario 'an existing user signs in' do
 		user = FactoryGirl.create(:user)
-		sign_in(user)
-		page.should have_content "Welcome! You have successfully signed in."
+		visit "users/sign_in"
+		fill_in :user_email, with: user.email
+		fill_in :user_password, with: user.password
+		page.should have_content "Login successful."
 	end
 end

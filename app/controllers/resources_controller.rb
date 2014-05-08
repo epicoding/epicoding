@@ -1,4 +1,5 @@
 class ResourcesController < ApplicationController
+  respond_to :html, :xml, :json
 
   before_filter :get_tool
 
@@ -11,16 +12,17 @@ class ResourcesController < ApplicationController
   end
 
   def new
-    @resource = Resource.new
+    @tool = Tool.find(params[:tool_id])
+    @resource = @tool.resources.build
+    respond_with(@resource)
   end
 
   def create
-    @tool = Tool.find(params[:tool_id])
-    @resource = Resource.new(params[:strong])
-    @resource = @tool.resources.new(params[:strong])
+    @tool = Tool.find(strong[:tool_id])
+    @resource = @tool.resources.build(strong)
     if @resource.save
-      redirect_to [@tool, @resource],
-      flash[:notice] = 'Resource successfull submitted.'
+      redirect_to [@tool, @resource]
+      flash[:notice] = 'Resource successfully submitted.'
     else
       flash[:notice] = 'Please fix the errors as marked.'
       render 'new'
@@ -28,8 +30,8 @@ class ResourcesController < ApplicationController
   end
 
   def show
+    @tool = Tool.find(params[:tool_id])
     @resource = @tool.resources.find(params[:id])
-
     respond_to do |format|
       format.html
       format.json { render json: @tool.resource }
@@ -59,10 +61,6 @@ class ResourcesController < ApplicationController
 
 private
   def strong
-    params.require(:resource).permit(:name, :summary, :url)
-  end
-
-  def tool_params
-    params.require(:tool).permit(:id)
+    params.require(:resource).permit(:name, :summary, :url, :tool_id, :user_id)
   end
 end
