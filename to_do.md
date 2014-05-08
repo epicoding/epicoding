@@ -28,6 +28,8 @@
     d. Create_new
 
 2. Add dropdown menu for sorting by resource category and tool type.
+    a. This should be in the overall site for sorting all the tools
+    b. Also have a dropdown menu to sort the resources for each tool in-line with the "name | show resources | add resource|" line to include "| Sort by Category"
 
 
 ## Other non-dated tasks:
