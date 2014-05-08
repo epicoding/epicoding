@@ -1,5 +1,14 @@
-<h3><%= @resource.name %></h3>
+<h4>Tool: <%= @tool.name %></h4>
+
+<h2>Resource: <%= @resource.name %></h2>
   <ul>
-    <li><%= @resource.url %></li>
-    <li><%= @resource.summary %></li>
+    <li><strong>URL: </strong><a href="<%= @resource.url %>" target="_blank"><%= @resource.url %></a></li>
+    <li><strong>Summary: </strong><%= @resource.summary %></li>
   </ul>
+
+<br>
+<br>
+<p><strong>Discussion: </strong><em>Coming soon!</em></p>
+<br>
+<hr>
+<h4>Back To <a href="/tools/<%= @tool.id %>"><%= @tool.name %></a></h4>
