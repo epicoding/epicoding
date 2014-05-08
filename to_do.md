@@ -33,6 +33,9 @@
 
 #### 140508
 
+    1. Integrate Rails Admin
+    2. Integrate votes for tools and resources
+    3. Write a script so that the tools#index shows only the top 10 voted resources, in order.
 
 ## Other non-dated tasks:
 

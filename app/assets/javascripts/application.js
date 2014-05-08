@@ -22,7 +22,7 @@ $(document).ready(function(){
   });
 
   $(".resources").click(function() {
-    $(this).parent().siblings("div.hidden-resources").toggle("slow");
+    $(this).parent().siblings("div.hidden-resources").toggle("fast");
   });
 });
 

@@ -1,5 +1,5 @@
-<h1>Nested Resources for All Tools</h1>
-<p>Note: If the <strong>Resources</strong> toggle does not work, refresh the page! Or fork the repo and fix the bug! :)</p>
+<h1>Tools Index</h1>
+<p>Note: If the <strong>Resources</strong> toggle does not work, refresh the page! Or <a href="https://github.com/dunphyben/epicoding" target="_blank">fork the repo</a> and fix the bug! :)</p>
 
 <% @tools.each do |tool| %>
   <ul>
@@ -7,16 +7,12 @@
 
     <div class="hidden-resources">
       <% tool.resources.each do |resource| %>
-
       <ul>
-
-          <li><%= link_to resource.name, tool_resource_path(tool, resource) %> | <a href="<%= resource.url %>" target="_blank"><%= resource.url %></a></li>
-          <ul>
-            <li><%= resource.summary %></li>
-          </ul>
-
+        <li><%= link_to resource.name, tool_resource_path(tool, resource) %> | <a href="<%= resource.url %>" target="_blank"><%= resource.url %></a></li>
+        <ul>
+          <li><%= resource.summary %></li>
+        </ul>
       </ul>
-
       <% end %>
     </div>
   </ul>
