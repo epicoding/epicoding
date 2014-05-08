@@ -1,21 +1,27 @@
 <h1>Nested Resources for All Tools</h1>
 
-
-
 <% @tools.each do |tool| %>
   <ul>
-  <li><%= link_to tool.name, tool_path(tool.id) %> | <%= link_to "Show Resources (refactor with AJAX)", tool_path(tool.id), :class => 'btn-tools' %> | <%= link_to "Add Resource (AJAX)", new_tool_resource_path(tool.id), :class => 'btn-resources' %></li>
-    <% tool.resources.each do |resource| %>
-    <ul>
-      <li><%= link_to resource.name, tool_resource_path(tool, resource) %> | <a href="<%= resource.url %>"><%= resource.url %></a></li>
-      <!--ionicons not working!
-      <li class="ion-ionic" data-pack="default"></li-->
+    <li><%= link_to tool.name, tool_path(tool.id) %> | <span id="show"><span id="resources">Resources</span></span> <% if current_user %>| <%= link_to "Add Resource (AJAX)", new_tool_resource_path(tool.id), :class => 'btn-resources' %><% end %></li>
 
-        <ul>
-          <li><%= resource.summary %></li>
-        </ul>
-    </ul>
-    <% end %>
+
+      <% tool.resources.each do |resource| %>
+
+      <ul>
+        <div class="hidden-resources">
+        <li><%= link_to resource.name, tool_resource_path(tool, resource) %> | <a href="<%= resource.url %>" target="_blank"><%= resource.url %></a></li>
+        <!--ionicons not working!
+        <li class="ion-ionic" data-pack="default"></li-->
+
+          <ul>
+            <li><%= resource.summary %></li>
+          </ul>
+          </div>
+      </ul>
+
+      <% end %>
+
   </ul>
-
 <% end %>
+
+

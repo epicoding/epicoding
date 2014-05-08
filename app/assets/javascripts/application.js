@@ -21,3 +21,9 @@ $(document).ready(function(){
     $('#toolSearch').submit();
   });
 });
+
+$(document).ready(function() {
+  $("#show").click(function() {
+    $(".hidden-resources").toggle();
+  });
+});
