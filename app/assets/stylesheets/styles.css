@@ -24,3 +24,7 @@ ul {
   color: #009933;
 }
 
+#hide-resources:hover {
+  cursor: pointer;
+  color: #CC0000;
+}

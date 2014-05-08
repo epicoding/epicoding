@@ -17,3 +17,7 @@
 <% if current_user %>
   <button class="btn btn-default"><%= link_to "Add Resource", new_tool_resource_path(@tool.id), :class => 'btn-resources' %></button>
 <% end %>
+
+<hr>
+
+<%= link_to "Home", root_path %>
