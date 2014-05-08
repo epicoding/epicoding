@@ -1,8 +1,9 @@
 <h1>Nested Resources for All Tools</h1>
+<p>Note: If the <strong>Resources</strong> toggle does not work, refresh the page! Or fork the repo and fix the bug! :)</p>
 
 <% @tools.each do |tool| %>
   <ul>
-    <li><%= link_to tool.name, tool_path(tool.id) %> | <span class="resources">Resources</span> <% if current_user %>| <%= link_to "Add Resource (AJAX)", new_tool_resource_path(tool.id), :class => 'btn-resources' %><% end %></li>
+    <li><%= link_to tool.name, tool_path(tool.id) %> | <span class="resources">Resources</span> <% if current_user %>| <%= link_to "Add Resource", new_tool_resource_path(tool.id), :class => 'btn-resources' %><% end %></li>
 
     <div class="hidden-resources">
       <% tool.resources.each do |resource| %>
