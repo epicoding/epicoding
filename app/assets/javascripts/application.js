@@ -20,10 +20,10 @@ $(document).ready(function(){
   $('#search').keyup(function(event){
     $('#toolSearch').submit();
   });
-});
 
-$(document).ready(function() {
-  $("#show").click(function() {
-    $(".hidden-resources").toggle();
+  $(".resources").click(function() {
+    $(this).parent().siblings("div.hidden-resources").toggle();
   });
 });
+
+

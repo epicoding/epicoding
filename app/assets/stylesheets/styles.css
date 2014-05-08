@@ -2,7 +2,7 @@
   color: #c09853;
 }
 
-#resources {
+.resources {
   color: #c09853;
 }
 
@@ -19,7 +19,7 @@ ul {
   display: none;
 }
 
-#resources:hover {
+.resources:hover {
   cursor: pointer;
   color: #009933;
 }
@@ -28,3 +28,4 @@ ul {
   cursor: pointer;
   color: #CC0000;
 }
+

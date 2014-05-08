@@ -2,25 +2,22 @@
 
 <% @tools.each do |tool| %>
   <ul>
-    <li><%= link_to tool.name, tool_path(tool.id) %> | <span id="show"><span id="resources">Resources</span></span> <% if current_user %>| <%= link_to "Add Resource (AJAX)", new_tool_resource_path(tool.id), :class => 'btn-resources' %><% end %></li>
+    <li><%= link_to tool.name, tool_path(tool.id) %> | <span class="resources">Resources</span> <% if current_user %>| <%= link_to "Add Resource (AJAX)", new_tool_resource_path(tool.id), :class => 'btn-resources' %><% end %></li>
 
-
+    <div class="hidden-resources">
       <% tool.resources.each do |resource| %>
 
       <ul>
-        <div class="hidden-resources">
-        <li><%= link_to resource.name, tool_resource_path(tool, resource) %> | <a href="<%= resource.url %>" target="_blank"><%= resource.url %></a></li>
-        <!--ionicons not working!
-        <li class="ion-ionic" data-pack="default"></li-->
 
+          <li><%= link_to resource.name, tool_resource_path(tool, resource) %> | <a href="<%= resource.url %>" target="_blank"><%= resource.url %></a></li>
           <ul>
             <li><%= resource.summary %></li>
           </ul>
-          </div>
+
       </ul>
 
       <% end %>
-
+    </div>
   </ul>
 <% end %>
 
