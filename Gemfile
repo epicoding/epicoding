@@ -44,6 +44,7 @@ group :development, :test do
   gem 'pry'
   gem 'less-rails'
   gem 'dotenv-rails'
+  gem 'rerun'
 end
 
 group :test do
