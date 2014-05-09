@@ -23,6 +23,8 @@ gem 'githubrepo'
 gem 'jquery-star-rating-rails'
 gem 'rails_admin'
 gem 'nested_form'
+gem 'cancancan', '~> 1.8'
+gem 'paper_trail', '~> 3.0.1'
 
 group :development do
   gem 'better_errors'
@@ -42,6 +44,7 @@ group :development, :test do
   gem 'pry'
   gem 'less-rails'
   gem 'dotenv-rails'
+  gem 'rerun'
 end
 
 group :test do
