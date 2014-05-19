@@ -32,6 +32,7 @@ class ResourcesController < ApplicationController
   def show
     @tool = Tool.find(params[:tool_id])
     @resource = @tool.resources.find(params[:id])
+    @user = User.find_by(params[:user_id])
     respond_to do |format|
       format.html
       format.json { render json: @tool.resource }
