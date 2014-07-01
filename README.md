@@ -46,9 +46,9 @@ For example, you might find a really useful tutorial for making objects with Jav
 
 ### Recently Completed Features:
 *Please add a completed feature to this list using the following format:
-###### Feature Foo
-	* *A user should be able to foo when they bar*  
-	* **Banksy McLovin**, 8/12/14
+> **Feature Foo**
+> *A user should be able to foo when they bar*  
+> **Banksy McLovin**, 8/12/14
 
 
 ### Notes RE: Schema
