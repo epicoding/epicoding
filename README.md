@@ -9,12 +9,24 @@ For example, you might find a really useful tutorial for making objects with Jav
 ## Contributing
 
 1. Fork the repo
-2. Create a branch
+2. Create a feature branch
+	* `git checkout -b <feature_branch_name>`
+	* Complete feature and update README accordingly
 3. Send us a pull request!
     * If you need assistance collaborating with Git, check out [using git for collaboration](http://www.learnhowtoprogram.com/lessons/using-git-for-collaboration) courtesy of Epicodus.
-4. Update README saying which task was done.
+4. Update README saying which task was done using below format
+
+### Recently Completed Features:
+*Please add a completed feature to this list using the following format:
+> **Feature Foo**
+> *A user should be able to foo when they bar*  
+> **Banksy McLovin**, 8/12/14
+
+
 
 ### Features to Add:
+
+**Ben: create a public Trello doc to track features**
 
 1. Voting
 	* Users should be able to vote up and down both resources and tools
@@ -42,13 +54,6 @@ For example, you might find a really useful tutorial for making objects with Jav
 	* A topic should be able to have tools assigned to it as categories (different from the tools/categories dynamic for the app. In this instance, the tool *is* the category, so that a user can follow all discussion for JavaScript, for example)
 8. Private messaging
 	* A user should be able to send a private message to another user. 
-
-### Recently Completed Features:
-*Please add a completed feature to this list using the following format:
-> **Feature Foo**
-> *A user should be able to foo when they bar*  
-> **Banksy McLovin**, 8/12/14
-
 
 ### Notes RE: Schema
 
