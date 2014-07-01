@@ -8,8 +8,6 @@ For example, you might find a really useful tutorial for making objects with Jav
 
 ## Contributing
 
-*Please see the "to_do.md" file for a list of items that need to be completed.*
-
 1. Fork the repo
 2. Create a branch
 3. Send us a pull request!
@@ -23,6 +21,7 @@ For example, you might find a really useful tutorial for making objects with Jav
 2. Search & Sort
 	* Add search features. Check out Sunspot-Rails
 	* Add dropdowns to sort by category. Check out Select2
+	* Add sorting by newest (hint: timestamps), top (highest vote), and hot. Propose an algorithm for determining "hot". 
 3. Tools:Resource Display
 	* Main page should show max top 10 resources for any given tool, by vote. The rest of a tool's resources should be listed on the Tool's view page.
 4. Accessibility
