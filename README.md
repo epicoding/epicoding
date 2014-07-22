@@ -83,3 +83,4 @@ For example, you might find a really useful tutorial for making objects with Jav
 
 2. Members of the public can vote for 10 cents a vote. This prevents trolling and may contribute to the site's longevity. Integrate dwolla, paypal and bitcoin payment systems. If nothing else it's API practice.
 
+Here are some changes to test.
