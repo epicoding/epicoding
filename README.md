@@ -17,10 +17,7 @@ For example, you might find a really useful tutorial for making objects with Jav
 4. Update README saying which task was done using below format
 
 ### Recently Completed Features:
-*Please add a completed feature to this list using the following format:
-> **Feature Foo**
-> *A user should be able to foo when they bar*  
-> **Banksy McLovin**, 8/12/14
+* Please see the Epicoding [Trello Board](https://trello.com/b/opyMxwK7/epicoding) to see which features are currently being worked on and which are done.
 
 
 
@@ -79,8 +76,14 @@ For example, you might find a really useful tutorial for making objects with Jav
 
 ### Working Ideas
 
-1. Incoming students vote on resources parallel to the existing list. After a tool (i.e. Ruby, Javascript) receives 20 votes for its list of resources, the votes are merged with the existing votes for resources. However, at the end of each Epicodus class, the votes, lists and resources are all archived. Thus students can browse through the previous lists compared to the new Join list, as well as their list proper. Simply select a semester from a dropdown and render the new view, Ajax-style.
+1. Prior to the creation of Epicoding, Epicodus students would place their ideas in a google spreadsheet. Needless to say, it got ugly real quick.
 
-2. Members of the public can vote for 10 cents a vote. This prevents trolling and may contribute to the site's longevity. Integrate dwolla, paypal and bitcoin payment systems. If nothing else it's API practice.
+Thing is, we also created a google spreadsheet for finding hosuing. It was more efficient than what we had (nothing), but it wasn't something as efficient as an app created for that purpose.
+
+Create an app similar to Epicoding that solves another problem that prospective Epicodus students have: finding housing in the downtown Portland area. This is especially useful for those coming from out of town, state, or country (i.e. a majority). 
+
+2. Incoming students vote on resources parallel to the existing list. After a tool (i.e. Ruby, Javascript) receives 20 votes for its list of resources, the votes are merged with the existing votes for resources. However, at the end of each Epicodus class, the votes, lists and resources are all archived. Thus students can browse through the previous lists compared to the new Join list, as well as their list proper. Simply select a semester from a dropdown and render the new view, Ajax-style.
+
+3. Members of the public can vote for 10 cents a vote. This prevents trolling and may contribute to the site's longevity. Integrate dwolla, paypal and bitcoin payment systems. If nothing else it's API practice.
 
 Here are some changes to test.
