@@ -76,11 +76,9 @@ For example, you might find a really useful tutorial for making objects with Jav
 
 ### Working Ideas
 
-1. Prior to the creation of Epicoding, Epicodus students would place their ideas in a google spreadsheet. Needless to say, it got ugly real quick.
-
-Thing is, we also created a google spreadsheet for finding hosuing. It was more efficient than what we had (nothing), but it wasn't something as efficient as an app created for that purpose.
-
-Create an app similar to Epicoding that solves another problem that prospective Epicodus students have: finding housing in the downtown Portland area. This is especially useful for those coming from out of town, state, or country (i.e. a majority). 
+1. 	Prior to the creation of Epicoding, Epicodus students would place their ideas in 	 a google spreadsheet. Needless to say, it got ugly real quick.
+	Thing is, we also created a google spreadsheet for finding hosuing. It was more efficient than what we had (nothing), but it wasn't something as efficient as an app created for that purpose.
+	Create an app similar to Epicoding that solves another problem that prospective Epicodus students have: finding housing in the downtown Portland area. This is especially useful for those coming from out of town, state, or country (i.e. a majority). 
 
 2. Incoming students vote on resources parallel to the existing list. After a tool (i.e. Ruby, Javascript) receives 20 votes for its list of resources, the votes are merged with the existing votes for resources. However, at the end of each Epicodus class, the votes, lists and resources are all archived. Thus students can browse through the previous lists compared to the new Join list, as well as their list proper. Simply select a semester from a dropdown and render the new view, Ajax-style.
 
